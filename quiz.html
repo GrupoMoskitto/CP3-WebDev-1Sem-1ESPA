@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script>
+        // funcao para trocar o background color
+        function trocar(color){
+        document.body.style.background = color;
+        }
+
+    // quiz
+    document.addEventListener("DOMContentLoaded", function() {
+        alert("Seja bem-vindo ao quiz");
+
+        const perguntas = [
+            { perguntas: "Na Suíça existe capital? \n a) Sim, Genebra \n b) Sim, Berna \n c) Não", resposta: "c" },
+            { perguntas: "Qual a moeda oficial da Suíça? \n a) Euro \n b) Franco Suíço \n c) Dólar ", resposta: "B" },
+            { perguntas: "Quantos idiomas oficiais a Suíça possui? \n a) 3 \n b) 4 \n c) 1", resposta: "b" },
+            { perguntas: "Quais são eles? \n a) Alemão, Francês, italiano e romanche \n b) Alemão e italiano \n c) Não lembro", resposta: "A" },
+            { perguntas: "A Suíça é reconhecida pelos seus relógios? por que? \n a) Não. \n b) Sim, estilo \n c) Sim, alta precisão", resposta: "C" },
+            { perguntas: "Qual o principal produto agrícola da Suíça? \n a) Relógios e carros \n b) Queijo e produção leiteira \n c) Não.", resposta: "B" },
+            { perguntas: "Qual o esporte muito praticado lá? \n a) Hóquei no gelo \n b) Basquete \n c) Todas as anteriores", resposta: "a" },
+            { perguntas: "Qual a marca de chocolate suíço mais conhecida? \n a) Não sei a resposta \n b) Nestle \n c) Lindt, Nestlé, Toblerone e Barry Callebaut", resposta: "C" },
+            { perguntas: "A suíça é sede de alguma organização importante? \n a) Sim, ONU, OMC entre outras. \n b) Não. \n c) Todas as anteriores", resposta: "a" },
+            { perguntas: "Fato ou fake: Suíça está no top 10 de países mais seguros e felizes? \n a) Fato \n b) Fake \n c) Nenhum dos anteriores", resposta: "a" }
+        ];
+
+        let acertos = 0;
+
+        for (let i = 0; i < perguntas.length; i++) {
+            const respostaUsuario = prompt(perguntas[i].perguntas);
+            if (respostaUsuario && respostaUsuario.toLowerCase() === perguntas[i].resposta.toLowerCase()) {
+                acertos++;
+            }
+        }
+
+        document.getElementById("msg").innerHTML = `Você acertou ${acertos} de ${perguntas.length} perguntas`;
+    });
+    </script>
 </head>
 <body>
-    
+    <header>
+        <img src="./src/assets/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./produto.html">Produto</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                    <input type="button" class="color" onclick="trocar('#ea8145')"/>
+                    <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="resultado">
+        <div id="msg"> </div>
+    </div>
+
+
+
 </body>
 </html>
