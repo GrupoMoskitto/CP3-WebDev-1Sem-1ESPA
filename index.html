@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <img src="./src/assets/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./produto.html">Produto</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                    <input type="button" class="color" onclick="trocar('#ea8145')"/>
+                    <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="slideShow">
+            <img id="image"/>
+        </div>
+
+        <div class="first-atracoes">
+            <div class="title-atracoes">
+                <h2>Berggasthaus Äscher</h2>
+                <p>Muito mais do que um restaurante, um tesouro nas montanhas! 
+                    Venha conhecer e se apaixone!
+                </p>
+            </div>
+            <img src="https://aescher.ch/wp-content/uploads/2023/08/Aescher_low_res-775.jpg" alt="img-aescher">
+        </div>
+
+        <div class="title-produtos">
+            <h2>Nossos Pacotes</h2>
+        </div>
+
+        <div class="card-container">
+
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQRs6SThvLw85KHxcwmUAC44Fgiemkc2ML9Q&s" alt="img-card-1">
+                <h3>LATAM Airline</h3>
+                <p>15% de desconto nas passagens até dia 30/10/2024</p>
+            </div>
+
+            <div class="card">
+                <img src="https://logowik.com/content/uploads/images/822_swissair.jpg" alt="img-card-1">
+                <h3>SwissAir</h3>
+                <p>25% de desconto nas passagens até dia 25/11/2024</p>
+            </div>
+
+            <div class="card">
+                <img src="https://logos-world.net/wp-content/uploads/2020/03/Air-France-Logo-2009-2016.jpg" alt="img-card-1">
+                <h3>Air France</h3>
+                <p>17% de desconto até o dia 07/11/2024</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="rodape-container">
+
+            <div class="sections-rodape">
+                <h2>Sobre nós</h2>
+                <a href="#">Ver mais</a>
+            </div>
+
+            <div class="sections-rodape">
+                <h2>Serviços</h2>
+                <a href="#">Ver mais</a>
+            </div>
+
+            <div class="sections-rodape">
+                <h2>Links Rápidos</h2>
+                <a href="#">Ver mais</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+    <!--chamando o JS externo-->
+    <script src="./src/js/script.js"></script>
 </body>
 </html>
