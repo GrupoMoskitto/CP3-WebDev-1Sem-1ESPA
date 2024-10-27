@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <!--chamando o CSS externo-->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script>
+        // funcao para trocar o background color
+        function trocar(color){
+        document.body.style.background = color;
+        }
+    </script>
 </head>
 <body>
-    
+    <header>
+        <img src="./src/assets/logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./sobre.html">Sobre</a></li>
+                <li><a href="./quiz.html">Quiz</a></li>
+                <li><a href="./produto.html">Produto</a></li>
+                <li><a href="./contato.html">Contato</a></li>
+                <div class="changeColor">
+                    <input type="button" class="color" onclick="trocar('#a2c2f2')"/>
+                    <input type="button" class="color" onclick="trocar('#ea8145')"/>
+                    <input type="button" class="color" onclick="trocar('#2c4969')"/>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
 </body>
 </html>
